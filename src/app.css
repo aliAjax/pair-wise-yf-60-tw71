@@ -12,8 +12,31 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 .hero p { color:#5d7780; margin:0; }
 .card { background:#fff; border:1px solid #d7e5e7; border-radius:16px; padding:18px; box-shadow:0 10px 28px rgba(25,72,83,.06); }
 .grid { display:grid; grid-template-columns:1.1fr .9fr; gap:18px; }
-.stats { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-bottom:18px; }
+.stats { display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:14px; margin-bottom:18px; }
 .stats strong { display:block; font-size:28px; }
+.stats .card span { color:#5d7780; font-size:13px; }
+.gate.blocked { border-color:#f3b8b0; background:#fdf3f1; }
+.gate.blocked strong { color:#b42318; }
+.gate.ok { border-color:#9fd9c8; background:#f0faf6; }
+.gate.ok strong { color:#0d6664; }
+.gate ul { margin:8px 0 0; padding-left:18px; font-size:13px; color:#b42318; }
+.toast { position:fixed; top:16px; left:50%; transform:translateX(-50%); background:#082f49; color:#fff; padding:10px 18px; border-radius:10px; z-index:200; box-shadow:0 8px 24px rgba(8,47,73,.3); }
+.banner { background:#fff7e6; border:1px solid #f0d9a8; border-radius:12px; padding:12px 16px; margin-bottom:16px; display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
+.banner progress { flex:1; min-width:160px; height:8px; }
+.recurrence { background:#fdeef0; color:#9e1f2b; }
+.blocked-badge { background:#b42318; color:#fff; }
+.recurrences { background:#fdf3f1; border-left:3px solid #b42318; padding:8px 12px; border-radius:6px; margin:8px 0; }
+.recurrences ul { margin:6px 0 0; padding-left:18px; font-size:13px; }
+.inline { display:inline-grid; gap:2px; font-weight:600; font-size:13px; }
+.inline select { padding:6px 8px; }
+.build-form { display:grid; grid-template-columns:1fr 1fr auto; gap:10px; align-items:end; margin-bottom:14px; }
+.build-list { list-style:none; margin:0; padding:0; display:grid; gap:8px; }
+.build-list li { display:flex; justify-content:space-between; gap:12px; align-items:center; border:1px solid #e4ecee; border-radius:10px; padding:10px 12px; }
+.build-list li.current { border-color:#0f766e; background:#f0faf6; }
+.build-list .hint { margin-left:8px; }
+.build-actions { display:flex; gap:6px; flex-shrink:0; }
+.hint { color:#5d7780; font-size:13px; }
+.rules { margin:0; padding-left:20px; display:grid; gap:8px; font-size:14px; line-height:1.6; }
 .issue { border-bottom:1px solid #e4ecee; padding:13px 4px; }
 .issue h3 { margin:0 0 6px; }
 .meta { display:flex; gap:8px; flex-wrap:wrap; color:#5f7880; font-size:13px; }
