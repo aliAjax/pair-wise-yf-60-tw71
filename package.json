@@ -8,7 +8,9 @@
     "build": "vinxi build",
     "start": "vinxi start --host 0.0.0.0 --port 62025",
     "preview": "vinxi start --host 0.0.0.0 --port 62025",
-    "check": "tsc --noEmit"
+    "check": "tsc --noEmit",
+    "test:build": "tsc -p tsconfig.test.json && mkdir -p .test-build && echo '{\"type\":\"commonjs\"}' > .test-build/package.json",
+    "test": "npm run test:build && node --test .test-build/tests/"
   },
   "dependencies": {
     "@ark-ui/solid": "^5.39.2",
